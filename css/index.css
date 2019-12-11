@@ -134,3 +134,12 @@ html,
 body {
   height: 100%;
 }
+.bigcontainer {
+  width: 100%;
+  margin: 0 auto;
+  background: #008B8B;
+}
+.bigcontainer .self {
+  width: 25%;
+  height: auto;
+}
