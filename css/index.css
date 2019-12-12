@@ -130,75 +130,130 @@ table {
 * {
   box-sizing: border-box;
 }
+@font-face {
+  font-family: 'Bitter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Bitter Regular'), local('Bitter-Regular'), url(https://fonts.gstatic.com/s/bitter/v15/rax8HiqOu8IVPmn7f4xs.ttf) format('truetype');
+}
 html,
 body {
   height: 100%;
   font-size: 62.5%;
 }
-h1 {
+html h1,
+body h1 {
   font-size: 3.6rem;
+  color: white;
 }
-h2,
-h3,
-h4,
-h5,
-h6 {
+html h2,
+body h2,
+html h3,
+body h3,
+html h4,
+body h4,
+html h5,
+body h5,
+html h6,
+body h6 {
   font-size: 2.4rem;
 }
-nav {
+html nav,
+body nav {
   display: flex;
-  border: 2px solid red;
   justify-content: space-evenly;
   font-size: 2.2rem;
-  background: #87CEFA;
+  text-decoration: none;
+  padding: 3rem 0;
+  font-size: 1.8rem;
+  border: 3px outset gray;
+  margin: 2%;
+  padding: 2%;
+  width: 90%;
 }
-.bigcontainer {
+html nav a,
+body nav a {
+  text-decoration: none;
+  color: white;
+}
+html .bigcontainer,
+body .bigcontainer {
   width: 90%;
   margin: 0 auto;
-  background: #778899;
   padding: 0.8rem;
+  font-family: 'Bitter', serif;
+  color: white;
 }
-.bigcontainer .intro {
+html .bigcontainer .intro,
+body .bigcontainer .intro {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 2px solid blue;
-  font-size: 1.8rem;
 }
-.bigcontainer .intro .self {
-  width: 35%;
-  height: auto;
-  border: 2px solid red;
+@media (max-width: 500px) {
+  html .bigcontainer .intro,
+  body .bigcontainer .intro {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 }
-.bigcontainer .intro .summary {
-  border: 2px solid red;
-  background: #87CEFA;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-.bigcontainer .intro .smallcontainer {
-  border: 2px solid green;
-}
-.bigcontainer .workskills {
+html .bigcontainer .intro .imgs,
+body .bigcontainer .intro .imgs {
   display: flex;
   justify-content: space-evenly;
-  border: solid red;
+}
+html .bigcontainer .intro .self,
+body .bigcontainer .intro .self {
+  width: 20%;
+  height: auto;
+}
+html .bigcontainer .intro .uglysweater,
+body .bigcontainer .intro .uglysweater {
+  width: 15%;
+  height: auto;
+}
+html .bigcontainer .intro .summary,
+body .bigcontainer .intro .summary {
+  border: 3px outset gray;
+  margin: 2%;
+  padding: 2%;
+  padding: 3rem 0;
   font-size: 1.8rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
-.bigcontainer .workskills .skills {
-  border: 2px solid red;
-  background: #87CEFA;
-}
-.bigcontainer .workskills .workhistory {
-  border: 2px solid red;
-  background: #87CEFA;
-}
-.bigcontainer .contact {
-  border: 2px solid red;
-  background: #87CEFA;
+html .bigcontainer .workskills,
+body .bigcontainer .workskills {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3rem 0;
   font-size: 1.8rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+}
+@media (max-width: 500px) {
+  html .bigcontainer .workskills,
+  body .bigcontainer .workskills {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+html .bigcontainer .workskills .skills,
+body .bigcontainer .workskills .skills {
+  border: 3px outset gray;
+  margin: 2%;
+  padding: 2%;
+}
+html .bigcontainer .workskills .workhistory,
+body .bigcontainer .workskills .workhistory {
+  border: 3px outset gray;
+  margin: 2%;
+  padding: 2%;
+}
+html .bigcontainer .contact,
+body .bigcontainer .contact {
+  border: 3px outset gray;
+  margin: 2%;
+  padding: 2%;
+  padding: 3rem 0;
+  font-size: 1.8rem;
 }

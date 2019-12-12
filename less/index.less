@@ -52,87 +52,110 @@ table {
 * {
     box-sizing: border-box;
 }
-// @import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
 
-@main-color: #87CEFA;
 @main-font:'Bitter', serif;
+@font-color: white;
+
+.bordered(){
+	border:3px outset gray;
+	margin:2%;
+	padding:2%;
+}//closes bordered
+.textpad(){
+	padding: 3rem 0;
+	font-size:1.8rem;
+}//closes textpad
 
 html, body {
 	height: 100%;
-	font-size: 62.5%
-	// font-family: @main-font;
-}
+	font-size: 62.5%;
+
 h1{
 	font-size:3.6rem;
-}
+	color:@font-color;
+}//closes header
+
 h2, h3, h4, h5, h6{
 	font-size:2.4rem;
-}
+}//closes subheaders
+
 nav{
 	display:flex;
-	border: 2px solid red;
 	justify-content: space-evenly; 
 	font-size:2.2rem;
-	background: @main-color;
-}
+	text-decoration: none;
+	.textpad();
+	.bordered();
+	width: 90%;
+}//closes nav
+
+nav a{
+	text-decoration: none;
+	color:@font-color;
+}//closes out nav a
 
 .bigcontainer{
 	width:90%;
 	margin: 0 auto;
-	background: #778899;
 	padding: .8rem;
+	font-family: @main-font;
+	color:@font-color;
 
 	.intro{
 		display:flex;
 		flex-direction: column;
 		justify-content: center;
-		border: 2px solid blue;
-		font-size:1.8rem;
-		
+		@media( max-width: 500px ) {
+			flex-direction: column;
+			flex-wrap: wrap;
+			align-items: center;
+		}
+		.imgs{
+			display:flex;
+			justify-content: space-evenly;
+		}//closes imgs
 		.self{
-			width:35%;
+			width:20%;
 			height:auto;
-			border: 2px solid red;
-	}//closes out self
+		}//closes out self
+		
+		.uglysweater{
+			width:15%;
+			height:auto;
+		}//closes out uglysweater
 
 		.summary{
-			border: 2px solid red;
-			background: @main-color;
-			padding-top: 3rem;
-			padding-bottom: 3rem;
-		}
+			.bordered();
+			.textpad();
+		}//closes out summary
 
-		.smallcontainer{
-			border: 2px solid green;
-		}
-	
 }//closes out intro
+
 .workskills{
 	display: flex;
 	justify-content: space-evenly;
-	border: solid red;
-	font-size:1.8rem;
-	padding-top: 3rem;
-	padding-bottom: 3rem;
-
+	.textpad();
+	@media( max-width: 500px ) {
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+	}
 	.skills{
-		border: 2px solid red;
-		background: @main-color;
+		.bordered();
 	}//closes out skills
 
 	.workhistory{
-		border: 2px solid red;
-		background: @main-color;
+		.bordered();
 	}//closes out workhistory
 
 }//closes out workskills
 
 .contact{
-	border: 2px solid red;
-	background: @main-color;
-	font-size:1.8rem;
-	padding-top: 3rem;
-	padding-bottom: 3rem;
+	.bordered();
+	.textpad();
 }//closes out contact
 
 }//closes out bigcontainer
+
+}//closes html,body
