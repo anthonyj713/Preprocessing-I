@@ -52,30 +52,87 @@ table {
 * {
     box-sizing: border-box;
 }
+// @import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
+
+@main-color: #87CEFA;
+@main-font:'Bitter', serif;
 
 html, body {
 	height: 100%;
 	font-size: 62.5%
-	font-family:'Bitter', serif;
+	// font-family: @main-font;
 }
-h1, h2 {
-	font-size: 8rem;
-  }
+h1{
+	font-size:3.6rem;
+}
+h2, h3, h4, h5, h6{
+	font-size:2.4rem;
+}
+nav{
+	display:flex;
+	border: 2px solid red;
+	justify-content: space-evenly; 
+	font-size:2.2rem;
+	background: @main-color;
+}
 
 .bigcontainer{
-	width:100%;
+	width:90%;
 	margin: 0 auto;
-	background: #008B8B;
+	background: #778899;
+	padding: .8rem;
 
 	.intro{
 		display:flex;
+		flex-direction: column;
 		justify-content: center;
-		border: 2px solid red;
-	}
-	.self{
-		width:25%;
-		height:auto;
-	}
-	.
-}
+		border: 2px solid blue;
+		font-size:1.8rem;
+		
+		.self{
+			width:35%;
+			height:auto;
+			border: 2px solid red;
+	}//closes out self
 
+		.summary{
+			border: 2px solid red;
+			background: @main-color;
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+		}
+
+		.smallcontainer{
+			border: 2px solid green;
+		}
+	
+}//closes out intro
+.workskills{
+	display: flex;
+	justify-content: space-evenly;
+	border: solid red;
+	font-size:1.8rem;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+
+	.skills{
+		border: 2px solid red;
+		background: @main-color;
+	}//closes out skills
+
+	.workhistory{
+		border: 2px solid red;
+		background: @main-color;
+	}//closes out workhistory
+
+}//closes out workskills
+
+.contact{
+	border: 2px solid red;
+	background: @main-color;
+	font-size:1.8rem;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}//closes out contact
+
+}//closes out bigcontainer

@@ -133,13 +133,72 @@ table {
 html,
 body {
   height: 100%;
+  font-size: 62.5%;
+}
+h1 {
+  font-size: 3.6rem;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 2.4rem;
+}
+nav {
+  display: flex;
+  border: 2px solid red;
+  justify-content: space-evenly;
+  font-size: 2.2rem;
+  background: #87CEFA;
 }
 .bigcontainer {
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
-  background: #008B8B;
+  background: #778899;
+  padding: 0.8rem;
 }
-.bigcontainer .self {
-  width: 25%;
+.bigcontainer .intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid blue;
+  font-size: 1.8rem;
+}
+.bigcontainer .intro .self {
+  width: 35%;
   height: auto;
+  border: 2px solid red;
+}
+.bigcontainer .intro .summary {
+  border: 2px solid red;
+  background: #87CEFA;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.bigcontainer .intro .smallcontainer {
+  border: 2px solid green;
+}
+.bigcontainer .workskills {
+  display: flex;
+  justify-content: space-evenly;
+  border: solid red;
+  font-size: 1.8rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.bigcontainer .workskills .skills {
+  border: 2px solid red;
+  background: #87CEFA;
+}
+.bigcontainer .workskills .workhistory {
+  border: 2px solid red;
+  background: #87CEFA;
+}
+.bigcontainer .contact {
+  border: 2px solid red;
+  background: #87CEFA;
+  font-size: 1.8rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
